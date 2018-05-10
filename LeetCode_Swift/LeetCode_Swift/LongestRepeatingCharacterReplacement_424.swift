@@ -20,7 +20,7 @@ class LongestRepeatingCharacterReplacement_424 {
             count[Int(sArray[end].value - (UnicodeScalar("A")?.value)!)] += 1
             maxCount = max(maxCount, count[Int(sArray[end].value - (UnicodeScalar("A")?.value)!)])
             while end - start + 1 - maxCount > k {
-                count[Int(sArray[end].value - (UnicodeScalar("A")?.value)!)] -= 1
+                count[Int(sArray[start].value - (UnicodeScalar("A")?.value)!)] -= 1
                 start += 1
             }
             maxLength = max(maxLength, end - start + 1)
